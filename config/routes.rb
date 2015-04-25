@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   root to: "static_pages#landing_page"
+
+  #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  #%% Contractors
+  ##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  devise_for  :contractors
+  get   "contractors/:id" =>      "contractors#show", as: :contractor
+  get   "contractors/:id/edit" => "contractors#edit", as: :edit_contractor
+  patch "contractors/:id" =>      "contractors#update"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
