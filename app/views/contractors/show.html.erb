@@ -10,3 +10,11 @@
 <p><%= @contractor.description %></p>
 <p><%= @contractor.phone %></p>
 <p><%= @contractor.website %></p>
+<p>
+  <h4>Skills</h4>
+  <ul>
+  <% for category in @contractor.categories %>
+    <li><%= category.name %></li>
+  <% end %>
+  </ul>
+</p>

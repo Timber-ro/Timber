@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #%% Contractors
   ##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   devise_for  :contractors
+  get   "contractors" =>          "contractors#index"
   get   "contractors/:id" =>      "contractors#show", as: :contractor
   get   "contractors/:id/edit" => "contractors#edit", as: :edit_contractor
   patch "contractors/:id" =>      "contractors#update"

@@ -1,1 +1,7 @@
+<h2>Categories</h2>
+
+<% Category.all.each do |category| %>
+  <%= link_to category.name, contractors_path(category: CGI.escape(category.name)) %>
+<% end %>
+
 <%= link_to "Edit Contractor", edit_contractor_path(current_contractor) %>

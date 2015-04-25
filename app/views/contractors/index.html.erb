@@ -1,0 +1,7 @@
+List of the contractors for a certain category
+
+<%= @category.name %>
+
+<% @category.contractors.each do |contractor| %>
+  <p><%= link_to contractor.name, contractor_path(contractor) %></p>
+<% end %>

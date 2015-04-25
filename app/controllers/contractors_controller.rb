@@ -1,14 +1,18 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:show, :edit, :update]
 
+  def index
+    @category = Category.find_by name: params[:category]
+  end
+
   def show
   end
 
   def edit
-    
   end
 
   def update
+    params[:contractor][:category_ids] ||= []  
     @contractor.assign_attributes contractor_params
 
     respond_to do |format|
@@ -30,6 +34,7 @@ class ContractorsController < ApplicationController
 
     def contractor_params
       params.require(:contractor).permit(:profile_picture, :name,
-                                         :description, :phone, :website)
+                                         :description, :phone, :website,
+                                         category_ids: [])
     end
 end
