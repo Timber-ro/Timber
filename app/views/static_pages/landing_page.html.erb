@@ -1,7 +1,17 @@
 <h2>Categories</h2>
+<ul>
+  <% Category.all.each do |category| %>
+    <li>
+      <%= link_to category.name, 
+        contractors_path(category: CGI.escape(category.name)) %>
+    </li>
+  <% end %>
+</ul>
 
-<% Category.all.each do |category| %>
-  <%= link_to category.name, contractors_path(category: CGI.escape(category.name)) %>
-<% end %>
 
-<%= link_to "Edit Contractor", edit_contractor_path(current_contractor) %>
+<h2>Contractors</h2>
+<ul>
+  <% for contractor in Contractor.all %>
+    <li><%= link_to contractor.name, contractor_path(contractor) %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,8 @@
+<%= link_to "Home", root_path %> | 
+
+<% if contractor_signed_in? %>
+  <%= link_to "My Profile", contractor_path(current_contractor) %> |
+  <%= link_to "Sign out", destroy_contractor_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign in as worker", new_contractor_session_path %>
+<% end %>

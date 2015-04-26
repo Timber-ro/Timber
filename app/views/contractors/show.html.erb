@@ -1,9 +1,10 @@
 <% provide :title, @contractor.name %>
 
-<% if contractor_signed_in? && current_contractor == @contractor%>
-  <%= link_to "Edit profile", edit_contractor_path(@contractor) %>
-<% end %>
-<p></p>
+<p>
+  <% if contractor_signed_in? && current_contractor == @contractor%>
+    <%= link_to "Edit profile", edit_contractor_path(@contractor) %>
+  <% end %>
+</p>
 
 <p><%= image_tag @contractor.profile_picture.url(:medium) %></p>
 <p><%= @contractor.name %></p>
