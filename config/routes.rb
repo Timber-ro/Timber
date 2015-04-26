@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   get   "contractors/:id/edit" => "contractors#edit", as: :edit_contractor
   patch "contractors/:id" =>      "contractors#update"
 
+  #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  #%% Reviews
+  ##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  post  "reviews" =>              "reviews#create", as: :reviews
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

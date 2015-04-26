@@ -12,6 +12,7 @@ class Contractor < ActiveRecord::Base
   #%% Database Relations
   ##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   has_many                  :projects
+  has_many                  :reviews
   has_and_belongs_to_many   :categories
 
 

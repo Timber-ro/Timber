@@ -29,3 +29,33 @@
     </p>
   <% end %>
 </p>
+
+<p class="reviews">
+  <h4>Reviews</h4>
+  <ul class="reviews_list">
+    <% for review in @contractor.reviews %>
+      <li>
+        <%= review.body %>
+        <%= review.quality_rating %>
+        <%= review.efficiency_rating %>
+        <%= review.friendliness_rating %>
+        <%= review.commenter_email %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h5>Leave a Review</h5>
+  <%= form_for @contractor.reviews.build do |f| %>
+  <%# <%= form_for @contractor.reviews.build, remote: true do |f| %>
+    <%= f.text_field :contractor_id, hidden: true %>
+    <p>
+      <%= f.label       :commenter_email, "Your email" %>
+      <%= f.email_field :commenter_email, required: true %>
+    </p>
+    <p>
+      <%= f.label       :body %>
+      <%= f.text_area   :body, required: true %>
+    </p>
+    <%= f.submit %>
+  <% end %>
+</p>
