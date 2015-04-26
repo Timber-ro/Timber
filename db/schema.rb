@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425184120) do
+ActiveRecord::Schema.define(version: 20150425234413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,5 +55,17 @@ ActiveRecord::Schema.define(version: 20150425184120) do
 
   add_index "contractors", ["email"], name: "index_contractors_on_email", unique: true, using: :btree
   add_index "contractors", ["reset_password_token"], name: "index_contractors_on_reset_password_token", unique: true, using: :btree
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "contractor_id"
+    t.string   "title"
+    t.string   "description"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+  end
+
+  add_index "projects", ["contractor_id"], name: "index_projects_on_contractor_id", using: :btree
 
 end

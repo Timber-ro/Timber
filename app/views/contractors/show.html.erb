@@ -10,6 +10,7 @@
 <p><%= @contractor.description %></p>
 <p><%= @contractor.phone %></p>
 <p><%= @contractor.website %></p>
+
 <p>
   <h4>Skills</h4>
   <ul>
@@ -17,4 +18,14 @@
     <li><%= category.name %></li>
   <% end %>
   </ul>
+</p>
+
+<p>
+  <h4>Projects</h4>
+  <% for project in @contractor.projects %>
+    <p>
+      <h5><%= project.title %></h5>
+      <%= project.description %>
+    </p>
+  <% end %>
 </p>
