@@ -41,5 +41,13 @@
   </div>
   <br />
 
+  <div class="field">
+    <%= f.select(:county) do %>
+      <% Contractor::COUNTIES_OPTIONS.each do |c| -%>
+        <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+    <% end %>
+  </div>
+
   <%= f.submit %>
 <% end %>

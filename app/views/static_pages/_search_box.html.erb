@@ -1,0 +1,14 @@
+<%= form_tag search_contractors_path, :method => 'get' do %>
+  <p>
+
+    <% options = options_for_select(Category.categories_options) %>
+    <%= select_tag(:category, options) %>
+    <%# <%= text_field_tag :category, params[:category], placeholder: "category" %>
+
+    <% options = options_for_select(Contractor::COUNTIES_OPTIONS) %>
+    <%= select_tag(:county, options) %>
+    <%# <%= select_tag(:county, params[:county]) do %>
+
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>

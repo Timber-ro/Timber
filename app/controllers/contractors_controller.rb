@@ -5,6 +5,10 @@ class ContractorsController < ApplicationController
     @category = Category.find_by name: params[:category]
   end
 
+  def search
+    @contractors = Contractor.search(params)
+  end
+
   def show
   end
 
@@ -33,7 +37,7 @@ class ContractorsController < ApplicationController
     end
 
     def contractor_params
-      params.require(:contractor).permit(:profile_picture, :name,
+      params.require(:contractor).permit(:profile_picture, :name, :county,
                                          :description, :phone, :website,
                                          category_ids: [])
     end

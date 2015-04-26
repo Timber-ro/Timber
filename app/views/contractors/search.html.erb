@@ -1,0 +1,7 @@
+<p><%= render 'static_pages/search_box' %></p>
+
+<h1>Search Results</h1>
+
+<% for contractor in @contractors %>
+  <%= link_to contractor.name, contractor_path(contractor) %>
+<% end %>
