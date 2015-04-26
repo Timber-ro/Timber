@@ -1,21 +1,75 @@
-<h2>Search</h2>
-<%= render 'static_pages/search_box' %>
+<div class="row clearfix">
+  <div class="col-md-12 column">
+    <%= render 'static_pages/search_box' %>
+    <%= image_tag "bg.jpg", id: "landingPage", width: 1180, height: 400, alt: "1180x500" %>
+    <a class="btn btn-default page-scroll" href="#scroll_to_me" id = "scroll_bottom"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>      
+  </div>
+</div>
+<div class="row clearfix">
+  <div class="col-md-12 column">
+    <div class="row">
+      <h3 id="categories_header"> Specialisti</h3>
+      <h6 id="categories_header"> Meseriasi pentru nevoile casei tale.</h6>
+    </div>
+    <% @contractors.each_slice(2) do |contractor_row| %>
+      <div class="row">
+      <div class="content">
+        <div class="col-md-5">
+          <div class="grid">
+            <figure class="effect-apollo">
+              <img src="http://lorempixel.com/400/270/" alt="img3" width="100%"/>
+              <figcaption>
+              <h4><br><br><br><br><br><br><br><br> </h4>
+              <h4><b><%= contractor_row[0].name %></b></h4>
 
+              <%= link_to "View more", contractor_path(contractor_row[0]) %>
+              </figcaption>     
+            </figure>           
+          </div>
+        </div>
+        <% if contractor_row[1].present? %>
+          <div class="col-md-5">
+            <div class="grid">
+              <figure class="effect-apollo">
+                <img src="http://lorempixel.com/400/270/" alt="img3" width="100%"/>
+                <figcaption>
+                <h4><br><br><br><br><br><br><br><br> </h4>
+                <h4><b><%= contractor_row[1].name %></b></h4>
 
-<h2>Categories</h2>
-<ul>
-  <% Category.all.each do |category| %>
-    <li>
-      <%= link_to category.name, 
-        contractors_path(category: CGI.escape(category.name)) %>
-    </li>
+                <%= link_to "View more", contractor_path(contractor_row[1]) %>
+                </figcaption>     
+              </figure>           
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-</ul>
+  </div>
+</div>
+<!-- <script type="text/javascript"> -->
+<!-- $(document).ready(function(e) { -->
+<!--     $('.selectpicker').selectpicker(); -->
+<!--     }); -->
+<!-- </script> -->
 
-
-<h2>Contractors</h2>
-<ul>
-  <% for contractor in Contractor.all %>
-    <li><%= link_to contractor.name, contractor_path(contractor) %></li>
-  <% end %>
-</ul>
+<!-- <h2>Search</h2> -->
+<!-- <%= render 'static_pages/search_box' %> -->
+<!--  -->
+<!--  -->
+<!-- <h2>Categories</h2> -->
+<!-- <ul> -->
+<!--   <% Category.all.each do |category| %> -->
+<!--     <li> -->
+<!--       <%= link_to category.name, contractors_path(category: CGI.escape(category.name)) %> -->
+<!--     </li> -->
+<!--   <% end %> -->
+<!-- </ul> -->
+<!--  -->
+<!--  -->
+<!-- <h2>Contractors</h2> -->
+<!-- <ul> -->
+<!--   <% for contractor in Contractor.all %> -->
+<!--     <li><%= link_to contractor.name, contractor_path(contractor) %></li> -->
+<!--   <% end %> -->
+<!-- </ul> -->

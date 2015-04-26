@@ -1,8 +1,25 @@
-<%= link_to "Home", root_path %> | 
-
-<% if contractor_signed_in? %>
-  <%= link_to "My Profile", contractor_path(current_contractor) %> |
-  <%= link_to "Sign out", destroy_contractor_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign in as worker", new_contractor_session_path %>
-<% end %>
+<div class="row clearfix">
+  <div class="col-md-12 column">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="navbar-header">
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag "timber_logo.png" %>
+        <% end %>
+      </div>        
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav pull-right">
+          <% if contractor_signed_in? %>
+            <li id="menuLogin">
+              <%= link_to "Cont Constructor", contractor_path(current_contractor) %>
+          </li>
+          <li><%= link_to "Logout", destroy_contractor_session_path, method: :delete %></li>
+          <% else %>
+            <li id="menuLogin">
+              <%= link_to "Cont Constructor", new_contractor_registration_path %>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

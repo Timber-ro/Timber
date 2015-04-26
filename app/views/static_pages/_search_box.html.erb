@@ -1,14 +1,18 @@
-<%= form_tag search_contractors_path, :method => 'get' do %>
-  <p>
+<%= form_tag search_contractors_path, :method => 'get', class: "navbar-form navbar", role: "search", id: "search_bar"  do %>
 
-    <% options = options_for_select(Category.categories_options) %>
-    <%= select_tag(:category, options) %>
-    <%# <%= text_field_tag :category, params[:category], placeholder: "category" %>
+    <span class="glyphicon glyphicon-search"></span>
+    <div class="form-group">
+      <% options = options_for_select(Category.categories_options) %>
+      <%= select_tag(:category, options, class: "form-control align-center") %>
+    </div> 
+
+
+    <span class="white"> in </span>
+
 
     <% options = options_for_select(Contractor::COUNTIES_OPTIONS) %>
-    <%= select_tag(:county, options) %>
-    <%# <%= select_tag(:county, params[:county]) do %>
+    <%= select_tag(:county, options, class: "form-control align-center") %>
 
-    <%= submit_tag "Search", :name => nil %>
-  </p>
+
+    <%= submit_tag "Cauta", :name => nil, class: "btn btn-default align-right" %>
 <% end %>

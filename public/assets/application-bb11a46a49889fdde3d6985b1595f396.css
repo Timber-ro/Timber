@@ -1,0 +1,428 @@
+/* LAYOUT STYLE */
+
+
+html, body {
+	background:#eaeaea url(../img/bg.png) repeat;
+	font-size:12px;
+	font-family:"Open Sans", serif;
+	min-width:960px;
+	margin:0;
+	padding:0;
+	color:#aaa;
+}
+
+a {
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
+}
+
+h1 {
+	font-size:60px;
+	font-weight:400;
+	padding-top: 0px;	
+	margin: 0;
+	text-align:center;
+	color:#333;
+	text-shadow:1px 1px 5px rgba(0,0,0,0.2);
+}
+
+h1 small{
+	font-size:12px;
+	text-transform:uppercase; 
+	letter-spacing: 0.2em;
+	line-height: 40px;
+	display: block;
+}
+
+h1 span{
+	font-size:18px;
+	font-weight:400;
+	font-style:italic;
+	text-transform:uppercase; 
+	line-height:10px;
+	letter-spacing: 0.2em; 
+	display: block;
+}
+
+h1 a {
+	text-decoration:none; 
+	color:#00c6ff;
+	font-style:italic;
+}
+
+.top {
+	background:#222;
+	height:30px;
+	line-height:30px;
+	width:100%;
+	box-shadow:0 1px 2px rgba(0,0,0,0.6);
+	margin-bottom:20px;
+}
+.top_content {
+	width:680px;
+	text-align:center;
+	font-size:12px;
+	margin:0 auto;
+	text-transform:uppercase;	
+}
+.top_content a {
+	color:#aaa;
+	text-decoration:none;
+}
+.top_content a:hover {
+	color:#fff;
+}
+/* MENU STYLE */
+
+header {
+	width:680px;
+	margin:0 auto;	
+	position:relative;
+	padding:50px 0;
+}
+header nav#topmenu ul {
+	margin:0;
+	padding:0;
+}
+header nav#topmenu ul li {
+	float:left;
+	font-size:10px;	
+	list-style:none;
+	background:#222;
+	position:relative;
+	text-align:center;
+	text-transform:uppercase;
+	width:100px;
+	margin:0 16px;	
+	line-height:30px;
+}
+header nav#topmenu ul li a {
+	color:#aaa;	
+	text-decoration:none;
+}
+header nav#topmenu ul li a:hover {
+	color:#fff;	
+}
+header nav#topmenu ul li.active {
+	color:#fff;	
+}
+.main{
+	position:relative;
+  width:680px;
+  margin: 0 auto;
+	padding:20px 0;
+}
+#logo {
+	margin: 15px 10px 0px 10px;
+}
+#search_bar {
+	position: absolute;	
+	left: 33%;
+    top: 37%;
+	z-index: 1;
+	opacity: 0.6;
+}
+#landingPage {
+	position: relative;	
+	left: 0px;
+	bottom: -1px;
+	top: -23px;
+}
+#backgroundLangdinPage {
+	position: absolute;
+	/*top: 300px;*/	
+	left: 0px;
+    top: 0px;
+    width: auto;
+    height: auto;
+	z-index: -1;
+}
+#scroll_bottom {
+	position: absolute;
+	left: 47.5%;
+	top: 80%;
+	z-index: 1;
+	width: auto;
+    height: auto;
+    color: orange;
+    border: none;
+    font-size: 30px;
+}
+#categories_header {
+	color: gray;
+	text-align: center;	
+}
+#categories_name {
+	font-size: 20px;
+	font-weight: 800
+	color: orange;
+	text-shadow: orange 0.3em 0.3em 0.5em;
+}
+.container {
+	max-width: 1180px;
+  	margin: 0 auto;
+  	padding: 0px;
+  	width: 100%;
+  	background-color: white;
+}
+/* login button\*/
+#navLogin {
+   border-top: 1px solid #f5f3ed;
+   background: #f5f3ed;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f3ed));
+   background: -webkit-linear-gradient(top, #ffffff, #f5f3ed);
+   background: -moz-linear-gradient(top, #ffffff, #f5f3ed);
+   background: -ms-linear-gradient(top, #ffffff, #f5f3ed);
+   background: -o-linear-gradient(top, #ffffff, #f5f3ed);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;      
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #626362;
+   font-size: 16px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#navLogin:hover {
+   border-top-color: #f5f3ed;
+   background: #f5f3ed;
+   color: #f48a00;
+   }
+#navLogin:active {
+   border-top-color: #d3e3e0;
+   background: #d3e3e0;
+   font-style: bold;
+   }
+#btnLogin {
+	background-color: white;
+}
+#login_user {
+	color: #f48a00;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+form {
+	text-align:center;
+	margin-top: 10px;
+}
+body {
+	padding-top: 0px;
+	width: 100%;
+}
+
+.content {
+	margin: 0;
+	padding: 1em 1em 0 19em ;
+	max-width: 1180px;
+}
+
+.content > h2 {
+	clear: both;
+	margin: 0;
+	padding: 4em 1% 0;
+	color: #484B54;
+	font-weight: 800;
+	font-size: 1.5em;
+}
+
+.content > h2:first-child {
+	padding-top: 0em;
+}
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h4 {
+	word-spacing: -0.04em;
+	font-weight: 300;
+	color: #f48a00;	
+	margin: 50px;
+}
+
+.grid figure h4 span {
+	font-weight: 800;
+}
+
+.grid figure h4,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+
+figure.effect-apollo {
+	background: #A2A2A2;
+}
+
+figure.effect-apollo img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150%;
+	height: 150%;	
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 3em;
+	padding: 0 1em;
+	max-width: 150px;
+	border-right: 4px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-apollo h4 {
+	text-align: center;
+}
+
+figure.effect-apollo:hover img {
+	opacity: 0.6;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.transbox img {
+  margin: 50px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity:0.7;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+figure.transbox h4 {
+  margin: 30%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.white {
+  color: white !important;
+}
+
+.navbar-header {
+  z-index: 1000;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

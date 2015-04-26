@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield :title %></title>
+  <title>Timber.ro | <%= yield :title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <%= favicon_link_tag "favicon.png" %>
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="http://silviomoreto.github.io/bootstrap&#45;select/stylesheets/bootstrap&#45;select.css"> -->
 </head>
+
+
 <body>
+<div class="container">
+  <%= render 'layouts/header' %>
 
-<%= render 'layouts/header' %>
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" class="close alert-close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <%= msg %>
+    </div>
+  <% end %>
 
-<% flash.each do |name, msg| %>
-  <div class="alert alert-info alert-dismissible" role="alert">
-    <button type="button" class="close alert-close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    <%= msg %>
-  </div>
-<% end %>
-
-<%= yield %>
-
+  <%= yield %>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(e) {
+    $('.selectpicker').selectpicker();
+  });
+</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
